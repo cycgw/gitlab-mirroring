@@ -1,0 +1,13 @@
+stages:
+    - test
+
+test job:
+    stage: test
+    script:
+        - echo "I am a unit test!"
+        - mkdir .public
+        - cp -r README.md .public
+        - mv .public public
+    artifacts:
+        paths:
+            - public
