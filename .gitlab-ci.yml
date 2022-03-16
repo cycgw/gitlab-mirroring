@@ -2,16 +2,20 @@ stages:
     - test
     - build
 
-test job:
-    stage: test
-    script:
-        - echo "I am a unit test!"
-        - mkdir .test
-        - cp -r README.md .test
-        - mv .test test
-    artifacts:
-        paths:
-            - test
+# test job:
+#     stage: test
+#     script:
+#         - echo "I am a unit test!"
+#         - mkdir .test
+#         - cp -r README.md .test
+#         - mv .test test
+#     artifacts:
+#         paths:
+#             - test
+dummy-job:
+  stage: test
+  script:
+  - echo "pipeline must contain at least 1 job definition"
 
 build job:
     stage: build
