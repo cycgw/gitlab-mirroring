@@ -1,13 +1,19 @@
 stages:
     - test
+    - build
 
 test job:
     stage: test
     script:
         - echo "I am a unit test!"
-        - mkdir .public
-        - cp -r README.md .public
-        - mv .public public
+        - mkdir .test
+        - cp -r README.md .test
+        - mv .test test
     artifacts:
         paths:
-            - public
+            - test
+
+build job:
+    stage: build
+    script:
+        - echo "I am a build image!"
