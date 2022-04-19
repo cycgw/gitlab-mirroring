@@ -1,6 +1,6 @@
 stages:
-    - test
     - build
+    - test
 
 # test job:
 #     stage: test
@@ -18,6 +18,10 @@ dummy-job:
   - echo "pipeline must contain at least 1 job definition"
 
 build job:
-    stage: build
-    script:
-        - echo "I am a build image!"
+  stage: build
+   script:
+    - echo "I am a build image!"
+    - touch test.pdf
+  artifacts:
+    paths:
+    - public
