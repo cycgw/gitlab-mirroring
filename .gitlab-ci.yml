@@ -22,6 +22,7 @@ build job:
   script:
     - echo "I am a build image!"
     - New-Item -Type File test.txt
+    - echo 'test' >test.txt
   artifacts:
     paths:
     - public
