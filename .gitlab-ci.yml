@@ -21,7 +21,7 @@ build job:
   stage: build
   script:
     - echo "I am a build image!"
-    - touch test.pdf
+    - New-Item -Type File test.txt
   artifacts:
     paths:
     - public
