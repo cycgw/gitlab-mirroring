@@ -25,4 +25,4 @@ build job:
     - echo 'test' >test.txt
   artifacts:
     paths:
-    - public
+    - public/test.txt
