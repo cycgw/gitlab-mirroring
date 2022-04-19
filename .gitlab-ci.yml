@@ -16,6 +16,7 @@ dummy-job:
   stage: test
   script:
     - echo "pipeline must contain at least 1 job definition"
+    - cat test.txt
 
 build job:
   stage: build
