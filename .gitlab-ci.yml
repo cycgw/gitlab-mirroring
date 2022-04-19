@@ -15,11 +15,11 @@ stages:
 dummy-job:
   stage: test
   script:
-  - echo "pipeline must contain at least 1 job definition"
+    - echo "pipeline must contain at least 1 job definition"
 
 build job:
   stage: build
-   script:
+  script:
     - echo "I am a build image!"
     - touch test.pdf
   artifacts:
