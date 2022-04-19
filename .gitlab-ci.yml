@@ -18,12 +18,11 @@ dummy-job:
     - echo "pipeline must contain at least 1 job definition"
 
 build job:
-  before_script:
-    - New-Item -Type File test.txt
-    - echo 'test' >test.txt
   stage: build
   script:
     - echo "I am a build image!"
+    - New-Item -Type File test.txt
+    - echo 'test' >test.txt
   artifacts:
     paths:
-    - public/test.txt
+    - test.txt
