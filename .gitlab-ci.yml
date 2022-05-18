@@ -27,3 +27,4 @@ build job:
   artifacts:
     paths:
     - test.txt
+
